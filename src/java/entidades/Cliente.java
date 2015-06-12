@@ -19,12 +19,14 @@ import javax.persistence.Version;
  */
 @Entity
 public class Cliente implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     private String sobrenome;
+    private String nif;
     private String domicilio;
     private String localidade;
     private String numeroContribuinte;
@@ -32,7 +34,7 @@ public class Cliente implements Serializable {
     private String provincia;
     private String email;
     private String telefone;
-    
+
     @OneToOne
     private Utilizador utilizador;
     @Version
@@ -41,10 +43,11 @@ public class Cliente implements Serializable {
     public Cliente() {
     }
 
-    public Cliente(Long id, String nome, String sobrenome, String domicilio, String localidade, String numeroContribuinte, String caixaPostal, String provincia, String email, String telefone, Utilizador utilizador) {
+    public Cliente(Long id, String nome, String sobrenome, String nif, String domicilio, String localidade, String numeroContribuinte, String caixaPostal, String provincia, String email, String telefone, Utilizador utilizador) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
+        this.nif = nif;
         this.domicilio = domicilio;
         this.localidade = localidade;
         this.numeroContribuinte = numeroContribuinte;
@@ -53,10 +56,8 @@ public class Cliente implements Serializable {
         this.email = email;
         this.telefone = telefone;
         this.utilizador = utilizador;
-       
+
     }
-    
-    
 
     public Long getId() {
         return id;
@@ -80,6 +81,14 @@ public class Cliente implements Serializable {
 
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public void setNif(String nif) {
+        this.nif = nif;
     }
 
     public String getDomicilio() {
@@ -146,9 +155,6 @@ public class Cliente implements Serializable {
         this.utilizador = utilizador;
     }
 
-    
-    
-    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -173,5 +179,5 @@ public class Cliente implements Serializable {
     public String toString() {
         return "entidades.Cliente[ id=" + id + " ]";
     }
-    
+
 }
