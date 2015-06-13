@@ -20,6 +20,7 @@ import javax.persistence.Version;
  */
 @Entity
 public class ItemFactura implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,15 +32,15 @@ public class ItemFactura implements Serializable {
     private Long quantidade;
     private Double preco;
     private Double desconto;
-    
+
     @Version
     private Integer version;
-    
+
     @Transient
     private Double totalItem;
 
     public ItemFactura() {
-        this.totalItem=0.0;
+        this.totalItem = 0.0;
     }
 
     public ItemFactura(Long id, Factura factura, Produto produto, Long quantidade, Double preco, Double desconto) {
@@ -49,10 +50,8 @@ public class ItemFactura implements Serializable {
         this.quantidade = quantidade;
         this.preco = preco;
         this.desconto = desconto;
-       
+
     }
-    
-       
 
     public Long getId() {
         return id;
@@ -102,21 +101,28 @@ public class ItemFactura implements Serializable {
         this.totalItem = totalItem;
     }
 
-    private void calcularTotalItem(){
-    
-    if((this.quantidade != null)&&(this.preco!=null)&&(this.desconto!=null)){
-    totalItem =(quantidade*preco)*((100-desconto)/100);
-    
-    }else{
-    
-    this.totalItem=0.0;
+    public Long getQuantidade() {
+        return quantidade;
     }
-    
+
+    public void setQuantidade(Long quantidade) {
+        this.quantidade = quantidade;
     }
+
     
     
-    
-    
+    private void calcularTotalItem() {
+
+        if ((this.quantidade != null) && (this.preco != null) && (this.desconto != null)) {
+            totalItem = (quantidade * preco) * ((100 - desconto) / 100);
+
+        } else {
+
+            this.totalItem = 0.0;
+        }
+
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -141,5 +147,5 @@ public class ItemFactura implements Serializable {
     public String toString() {
         return "entidades.ItemFactura[ id=" + id + " ]";
     }
-    
+
 }
