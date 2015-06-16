@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package negocio;
+package ejb.negocio;
 
-import entidades.Produto;
+import jpa.entidades.Produto;
 
 /**
  *
  * @author praveen
  */
 public class ProdutoCompra {
+
     private Produto produto;
     private long quantidade;
 
@@ -38,6 +39,15 @@ public class ProdutoCompra {
     public void setQuantidade(long quantidade) {
         this.quantidade = quantidade;
     }
-    
-    
+
+    public void incrementarQuantidade(long incremento) {
+
+        this.quantidade += incremento;
+    }
+
+    public void decrementarQuantidade(long reducao) {
+        this.quantidade -= reducao;
+
+    }
+
 }

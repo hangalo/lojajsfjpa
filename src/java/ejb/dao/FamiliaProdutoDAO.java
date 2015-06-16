@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package ejb.dao;
 
-import entidades.FamiliaProduto;
+import jpa.entidades.FamiliaProduto;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.Query;

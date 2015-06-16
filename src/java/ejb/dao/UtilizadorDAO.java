@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package ejb.dao;
 
-import entidades.TipoUtilizador;
-import entidades.Utilizador;
+import jpa.entidades.TipoUtilizador;
+import jpa.entidades.Utilizador;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.Query;

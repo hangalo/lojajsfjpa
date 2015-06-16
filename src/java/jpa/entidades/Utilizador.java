@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entidades;
+package jpa.entidades;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -42,13 +42,12 @@ public class Utilizador implements Serializable {
     public Utilizador() {
     }
 
-    public Utilizador(Long id, String login, String password, Date dataInscricao, Date ultimoAcesso, TipoUtilizador tipoUtilizador) {
-        this.id = id;
+    public Utilizador(String login, String password, TipoUtilizador tipoUtilizador, Date dataInscricao) {
+       
         this.login = login;
         this.password = password;
-        this.dataInscricao = dataInscricao;
-        this.ultimoAcesso = ultimoAcesso;
         this.tipoUtilizador = tipoUtilizador;
+         this.dataInscricao = dataInscricao;
        
     }
     

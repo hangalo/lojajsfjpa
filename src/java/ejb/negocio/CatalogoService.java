@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package negocio;
+package ejb.negocio;
 
-import dao.FamiliaProdutoDAO;
-import dao.ProdutoDAO;
-import entidades.FamiliaProduto;
-import entidades.Produto;
+import ejb.dao.FamiliaProdutoDAO;
+import ejb.dao.ProdutoDAO;
+import jpa.entidades.FamiliaProduto;
+import jpa.entidades.Produto;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;

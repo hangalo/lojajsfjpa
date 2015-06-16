@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package ejb.dao;
 
-import entidades.EstadoPedido;
-import entidades.Factura;
-import entidades.ItemFactura;
-import entidades.Produto;
+import jpa.entidades.EstadoPedido;
+import jpa.entidades.Factura;
+import jpa.entidades.ItemFactura;
+import jpa.entidades.Produto;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
@@ -20,7 +20,7 @@ import javax.persistence.Query;
  * @author praveen
  */
 @Stateless
-public class PedidoDAO extends DAOJPAGenerico<Factura> {
+public class FacturaDAO extends DAOJPAGenerico<Factura> {
 
     @EJB
     ProdutoDAO produtoDAO;

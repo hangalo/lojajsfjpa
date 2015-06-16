@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entidades;
+package jpa.entidades;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -53,8 +53,8 @@ public class Factura implements Serializable {
         this.totalFactura = 0.0;
     }
 
-    public Factura(Long id, Cliente cliente, Date dataEmissao, EstadoPedido estadoPedido) {
-        this.id = id;
+    public Factura(Cliente cliente, Date dataEmissao, EstadoPedido estadoPedido) {
+      
         this.cliente = cliente;
         this.dataEmissao = dataEmissao;
         this.estadoPedido = estadoPedido;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entidades;
+package jpa.entidades;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -43,9 +43,8 @@ public class ItemFactura implements Serializable {
         this.totalItem = 0.0;
     }
 
-    public ItemFactura(Long id, Factura factura, Produto produto, Long quantidade, Double preco, Double desconto) {
-        this.id = id;
-        this.factura = factura;
+    public ItemFactura(Factura factura, Produto produto, Long quantidade, Double preco, Double desconto) {
+         this.factura = factura;
         this.produto = produto;
         this.quantidade = quantidade;
         this.preco = preco;

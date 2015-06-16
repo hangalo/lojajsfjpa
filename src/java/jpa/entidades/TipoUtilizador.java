@@ -3,30 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package jpa.entidades;
 
 /**
  *
  * @author desenvolvimento
  */
-public interface InterfaceGenericaDAO <T>{
-    T criar(T entidade);
-    T actualizar(T entidade);
-    void eliminar(T entidade);
-    T buscarPorId(Object id);
+public enum TipoUtilizador {
+    CLIENTE,
+    ADMINISTRADOR
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
