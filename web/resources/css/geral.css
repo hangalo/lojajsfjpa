@@ -1,0 +1,62 @@
+#pagina{
+    width: 100%;
+    margin: 5px auto;
+}
+
+#cabecalho{
+    float: left;
+    width: 100%;
+
+    margin: 5px auto;
+
+    background-color: #c2dfef;
+    color: white;
+}
+
+#corpo{
+    float: left;
+    width: 100%;
+    background-color: #cfcfcf;
+}
+
+#conteudo{
+    margin-left: 20em;
+    background-color: #dddddd;
+    /* height: 200px; */
+    padding: 5px 0px 5px 50px;
+
+
+}
+
+#esquerda{
+    float: left;
+    width: 20em;
+    margin-left: 0%;
+    /* height: 200px; */
+
+    background-color: #ece3a5;
+    padding: 5px 0px 5px 5px;
+}
+
+#rodape{
+    float: left;
+    width: 100%;
+
+    background-color: #c2dfef;
+    text-align: center;
+
+}
+
+.erros {
+    color: red;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;
+    margin: 10px;
+}
