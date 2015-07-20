@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <h:outputStylesheet library="css" name="geral.css"/>
+        <title><ui:insert name="titulo"> Titulo</ui:insert></title>
+    </h:head>
+    <h:body>
+        <div id="pagina">
+            <div id="cabecalho">
+                <ui:insert name="cabecalho">Top</ui:insert>
+            </div>
+            <div id="corpo">
+                <div id="esquerda">
+                    <ui:insert name="esquerda">Left</ui:insert>
+                </div>
+                <div id="conteudo">
+                    <ui:insert name="conteudo">Content</ui:insert>
+                </div>
+            </div>
+            <div id="rodape">
+                <h3> JSF 2015 - Loja</h3>
+            </div>
+        </div>
+    </h:body>
+</html>
+
